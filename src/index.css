@@ -1,0 +1,109 @@
+/* Global Design System & Variables */
+:root {
+  /* Color Palette */
+  --color-cream: #FDFBF7;
+  --color-beige: #F5EBE0;
+  --color-light-orange: #E6CCB2;
+  --color-warm-orange: #DDB892;
+  --color-coffee-brown: #7F5539;
+  --color-dark-coffee: #9C6644;
+  --color-deep-espresso: #4A3525;
+  --color-accent-gold: #D4A373;
+  --color-text-dark: #2F1F17;
+  --color-text-muted: #5C4D44;
+  
+  /* Modern Glassmorphism Tokens */
+  --glass-bg: rgba(253, 251, 247, 0.65);
+  --glass-bg-dark: rgba(74, 53, 37, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(127, 85, 57, 0.15);
+  
+  /* Fonts */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Dynamic Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: all 0.2s ease-in-out;
+}
+
+/* Reset & Base Setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--color-cream);
+  color: var(--color-text-dark);
+  font-family: var(--font-body);
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Root Full Width */
+#root {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-deep-espresso);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+/* Stunning Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-orange);
+  border-radius: 5px;
+  border: 2px solid var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-coffee-brown);
+}
+
+/* Global Section Wrapper spacing */
+section {
+  padding: 100px 5% 80px 5%;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 70px 24px 60px 24px;
+  }
+}
