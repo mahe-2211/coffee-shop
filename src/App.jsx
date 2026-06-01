@@ -13,7 +13,7 @@ function App() {
   const [username, setUsername] = useState('');
   const [transitioning, setTransitioning] = useState(false);
 
-  // Read saved session if it exists
+  // Read saved session if it exists newly on component mount
   useEffect(() => {
     const savedUser = localStorage.getItem('mahi_coffee_user');
     if (savedUser) {
